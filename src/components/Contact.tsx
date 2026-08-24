@@ -31,12 +31,12 @@ export default function Contact() {
             <div className={styles.infoBlock}>
               <h3 className={styles.infoTitle}>Instagram</h3>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/barberiaelcanario"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.igLink}
               >
-                @barberia_elcanario
+                @barberiaelcanario
               </a>
             </div>
 
