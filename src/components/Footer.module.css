@@ -54,3 +54,10 @@
   color: var(--color-neutral-500);
   margin-top: var(--space-1);
 }
+
+@media (max-width: 640px) {
+  .footer { padding: 40px 20px; }
+  .brandName { font-size: 18px; }
+  .address { font-size: 13px; line-height: 1.5; }
+  .copy { font-size: 11px; }
+}

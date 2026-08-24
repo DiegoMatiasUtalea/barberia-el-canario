@@ -139,12 +139,27 @@
   color: var(--color-neutral-300);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-  .container { padding: 0 24px; }
-  .grid { grid-template-columns: 1fr; }
-  .summary { flex-direction: column; gap: var(--space-2); text-align: center; }
+  .container { padding: 0 20px; }
+  .grid { grid-template-columns: 1fr; gap: 16px; }
+  .summary {
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    padding: 16px 20px;
+  }
+  .summaryScore { font-size: 42px; }
+  .summaryCount { font-size: 12px; }
+  .card { padding: 24px 20px; }
+}
+
+@media (max-width: 380px) {
+  .summary { gap: 12px; padding: 14px 12px; }
+  .summaryScore { font-size: 38px; }
+  .summaryCount { font-size: 11px; }
 }

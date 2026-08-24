@@ -148,13 +148,47 @@
   filter: grayscale(30%) invert(5%);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(300px, 360px) 1fr;
+    gap: var(--space-4);
   }
-  .mapWrapper { height: 320px; }
+  .scheduleRow {
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+  .scheduleHours { text-align: right; }
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .info { max-width: 620px; }
+  .mapWrapper { height: 360px; }
 }
 
 @media (max-width: 640px) {
-  .container { padding: 0 24px; }
+  .container { padding: 0 20px; }
+  .info { gap: 28px; }
+  .phone { font-size: 20px; }
+  .scheduleRow { align-items: flex-start; }
+  .scheduleDay,
+  .scheduleHours { font-size: 13px; }
+  .scheduleHours { margin-left: auto; max-width: 62%; }
+  .callBtn {
+    width: 100%;
+    min-height: 52px;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+  .mapWrapper { height: 280px; }
+}
+
+@media (max-width: 380px) {
+  .scheduleRow { display: block; }
+  .scheduleHours {
+    display: block;
+    margin: 2px 0 0;
+    max-width: none;
+    text-align: left;
+  }
 }

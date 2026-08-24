@@ -19,9 +19,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-      <a href="#inicio" className={styles.brand}>
+      <a href="#inicio" className={styles.brand} onClick={() => setMenuOpen(false)}>
         <span className={styles.brandIcon}>✂</span>
         <span className={styles.brandText}>El Canario</span>
       </a>
@@ -35,7 +44,7 @@ export default function Navbar() {
           </li>
         ))}
         <li>
-          <a href="tel:+34611156315" className={styles.cta}>Reservar</a>
+          <a href="tel:+34611156315" className={styles.cta} onClick={() => setMenuOpen(false)}>Reservar</a>
         </li>
       </ul>
 
@@ -43,6 +52,7 @@ export default function Navbar() {
         className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
         onClick={() => setMenuOpen(v => !v)}
         aria-label="Menú"
+        aria-expanded={menuOpen}
       >
         <span /><span /><span />
       </button>

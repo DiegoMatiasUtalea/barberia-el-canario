@@ -128,11 +128,23 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-  .container { padding: 0 24px; }
-  .grid { grid-template-columns: 1fr; }
+  .container { padding: 0 20px; }
+  .header { margin-bottom: var(--space-6); }
+  .grid { grid-template-columns: 1fr; gap: 16px; }
+  .card { padding: 28px 24px; }
+  .cardName { font-size: 21px; }
+  .ctaBtn {
+    width: 100%;
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 20px;
+  }
 }

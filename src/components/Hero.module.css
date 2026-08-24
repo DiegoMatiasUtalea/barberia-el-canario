@@ -175,7 +175,73 @@
 }
 
 @media (max-width: 768px) {
-  .content { padding: 0 24px; }
-  .subtitle { font-size: 16px; }
+  .hero {
+    min-height: 620px;
+    height: 100svh;
+  }
+
+  .bgImg {
+    object-position: 58% center;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      105deg,
+      rgba(15, 12, 8, 0.9) 0%,
+      rgba(15, 12, 8, 0.68) 70%,
+      rgba(15, 12, 8, 0.5) 100%
+    );
+  }
+
+  .content {
+    width: 100%;
+    padding: 0 24px;
+    margin-top: 36px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+
+  .title {
+    font-size: clamp(48px, 14vw, 72px);
+    overflow-wrap: break-word;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    max-width: 420px;
+  }
+
+  .rating {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: var(--space-4);
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 360px;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    min-height: 52px;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
   .scroll { display: none; }
+}
+
+@media (max-width: 380px) {
+  .content { padding: 0 20px; }
+  .title { font-size: 46px; }
+  .subtitle { font-size: 15px; }
+  .ratingText { font-size: 12px; }
 }
